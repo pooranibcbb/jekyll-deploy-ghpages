@@ -1,6 +1,11 @@
-FROM alpine:3.10
+FROM ruby:2.6.3
 
-COPY LICENSE README.md /
+# Set default locale for the environment
+ENV LC_ALL C.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+
+COPY README.md /
 
 COPY entrypoint.sh /entrypoint.sh
 
